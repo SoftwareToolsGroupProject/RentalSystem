@@ -1,5 +1,5 @@
 # RentalSystem
-Develop and design an application using Microsoft Azure DevOps as the primary software management too
+Develop and design an application using Microsoft Azure DevOps as the primary software management tool
 
 SPRINT ONE - Project Planning
 
