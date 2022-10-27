@@ -58,3 +58,20 @@ INSERT INTO Members
 (Forename, Lastname, Password, Eircode, Phone, Email, DOB)
 VALUES
 ('Ivan', 'Segade Carou', 'Hello', 'V92XX33', '0833333333', 'ivan@segade.carou', '2003-03-03');
+
+
+INSERT INTO DVDs
+(Title, Genre, Duration, rating, Cost, Status)
+VALUES
+('Thesis', 'Thriller', '2:00:00', 4.7, 5.95, 'A');
+
+INSERT INTO DVDs
+(Title, Genre, Duration, rating, Cost, Status)
+VALUES
+('Back to the Future I', 'Fiction', '2:00:00', 4.8, 6.95, 'A');
+
+INSERT INTO DVDs
+(Title, Genre, Duration, rating, Cost, Status)
+VALUES
+('Sea inside', 'Drama', '1:50:00', 4.3, 4.95, 'A');
+
