@@ -1,3 +1,8 @@
+html, body{
+  margin:0;
+  padding: 0;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -7,18 +12,61 @@ a {
   color: #00B7FF;
 }
 
-.card{
-  margin-bottom: 2rem;
-  
+.myAccountSection{
+  width: 90%;
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
 }
 
-.row{
+.formIn{
+  margin: 0.4rem;
+}
+
+.myAccountRow{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin:0.6rem;
 }
 
 input{
-  margin:0.6rem;
+  margin-top: 0.6rem;
+  width: 100%;
+}
+
+td{
+  padding: 0.1rem;
+}
+
+.tableSub{
+  text-align: center;
+  font-weight: bold;
+ 
+}
+
+.updateAccountBtn{
+  padding: 0.6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.formCol{
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  
+}
+
+.left{
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.right{
+  margin-right: 0;
+  margin-left: auto;
 }
 
 

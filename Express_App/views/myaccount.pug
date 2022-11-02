@@ -1,0 +1,69 @@
+extends layout
+
+block content
+
+
+    .card.myAccountSection
+     h2 My Account Details  
+     .row.myAccountRow 
+            
+        .col-lg-6.formCol
+            table.left
+                tr 
+                    td Firstname* 
+                    td 
+                        input(type="text", name="").formIn
+                tr 
+                    td Lastname* 
+                    td 
+                        input(type="text", name="").formIn
+                tr 
+                    td Password* 
+                    td 
+                        input(type="text", name="").formIn
+                tr 
+                    td Confirm Password* 
+                    td 
+                        input(type="text", name="").formIn
+                tr 
+                    td
+                     br
+                tr
+                    td 
+                     br
+                     
+        
+        .col-lg-6.formCol
+            table.right
+                tr 
+                    td Email* 
+                    td 
+                        input(type="text", name="").formIn
+                tr 
+                    td Phone* 
+                    td 
+                        input(type="text", name="").formIn
+                tr 
+                    td(colspan="3").tableSub Card Details
+
+                tr 
+                    td Card Number 
+                    td
+                        input(type="text", name="").formIn
+                tr  
+                    td Expiry Date 
+                    td 
+                        input(type="text", name="").formIn
+                tr 
+                    td CCV 
+                    td  
+                        input(type="text", name="").formIn
+        
+     .row.myAccountRow           
+        .col-lg-12.formCol 
+            button.btn.btn-primary.updateAccountBtn(type='button') Update My Details
+        
+                    
+    .card.myAccountSection
+        h2 Rental History  
+
