@@ -1,6 +1,9 @@
+html {
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  min-height: 100%;
 }
 
 a {
