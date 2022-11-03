@@ -23,6 +23,7 @@ a {
 
 .formIn{
   margin: 0.4rem;
+  font-size: 1.4rem;
 }
 
 .myAccountRow{
@@ -51,6 +52,7 @@ td{
   margin-top: 1rem;
   margin-bottom: 1rem;
   width: 100%;
+  font-size: 2rem;
 }
 
 .formCol{
@@ -89,5 +91,5 @@ td{
 }
 
 .rentalHistory{
-  overflow-y: scroll;
+  
 }
