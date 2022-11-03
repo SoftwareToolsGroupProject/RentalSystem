@@ -13,22 +13,22 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     
     body
-      nav.navbar.navbar-light.navbar-expand-md.py-3
+      nav.navbar.navbar-light.bg-light.navbar-expand-md.py-3.sticky-top.navbar-shrink.py-3
         .container
-          span DVD Rental
-          a.navbar-brand.d-flex.align-items-center(href='#')
+          
+          a.navbar-brand.d-flex.align-items-center(href='/') DVD Rental
           button.navbar-toggler(data-toggle='collapse', data-target='#navcol-2')
             span.sr-only Toggle navigation
             span.navbar-toggler-icon
           #navcol-2.collapse.navbar-collapse
             ul.navbar-nav.mr-auto
               li.nav-item
-                a.nav-link.active(href='#')
+                a.nav-link.active(href='/rentals')
                   strong My Rentals
               li.nav-item
-                a.nav-link(href='#') My Account
+                a.nav-link(href='/myAccount') My Account
             input(type='search', style='padding-top: 1px;', placeholder='Search')
-            a.btn.btn-dark(role='button', href='#') Log out
+            a.btn.btn-dark(role='button', href='/login') Log out
           
     block content
 
@@ -56,3 +56,4 @@ html
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')
     scipt(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.bundle.min.js')
+    script(src='/javascripts/bootstrap.min.js')
