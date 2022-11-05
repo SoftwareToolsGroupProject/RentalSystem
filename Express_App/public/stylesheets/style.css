@@ -1,7 +1,5 @@
-html {
-  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-body {
+html, body{
+  margin:0;
   padding: 50px;
   min-height: 100%;
 }
@@ -10,18 +8,85 @@ a {
   color: #00B7FF;
 }
 
-.card{
-  margin-bottom: 2rem;
-  
+.myAccountSection{
+  width: 90%;
+  height: 48%;
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  margin-top:1rem;
+} 
+
+.formIn{
+  margin: 0.4rem;
+  font-size: 1.4rem;
 }
 
-.row{
+.myAccountRow{
   display: flex;
-  justify-content: space-around;
-}
-
-input{
+  justify-content: space-between;
   margin:0.6rem;
 }
 
+input{
+  margin-top: 0.6rem;
+  width: 100%;
+}
 
+td{
+  padding: 0.1rem;
+}
+
+.tableSub{
+  text-align: center;
+  font-weight: bold;
+ 
+}
+
+.updateAccountBtn{
+  padding: 0.6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 2rem;
+}
+
+.formCol{
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  
+}
+
+.left{
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.left, .right{
+  width: 80%;
+}
+
+.right{
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.filmTable{
+  margin-bottom: 1rem;
+}
+
+.filmRow{
+  
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.filmCard{
+  margin-top: 0.4rem;
+}
+
+.rentalHistory{
+  
+}
