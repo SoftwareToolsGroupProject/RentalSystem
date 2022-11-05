@@ -1,7 +1,9 @@
 html, body{
   margin:0;
-  padding: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
   min-height: 100%;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -20,7 +22,7 @@ a {
 
 .formIn{
   margin: 0.4rem;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 .myAccountRow{
@@ -49,7 +51,7 @@ td{
   margin-top: 1rem;
   margin-bottom: 1rem;
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 
 .formCol{
