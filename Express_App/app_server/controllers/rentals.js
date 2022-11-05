@@ -1,38 +1,54 @@
-/* GET 'home' page */
-const rentalsList = function (req, res) {
-    res.render('index', { title: 'My Rentals' });
+/* GET 'Rentals' page */
+const rentals = function (req, res) {
+    res.render('rentals', {
+        dvdInfo: [{
+            title: "The Nightmare Before Christmas",
+            description: "Jack Skellington, the Pumpkin King of Halloween Town, decides to spread Christmas joy to the world. But his well-meaning mission unwittingly puts Santa Clause in jeopardy and creates a nightmare for all good little boys and girls everywhere!",
+            image: "images/The_nightmare_before_christmas.jpg"
+        }, {
+            title: "Night At The Museum",
+            description: "A newly recruited night security guard at the Museum of Natural History discovers that an ancient curse causes the animals and exhibits on display to come to life and wreak havoc.",
+            image: "images/museum.jpg"
+        }, {
+            title: "Thor Ragnarok",
+            description: "Imprisoned on the other side of the universe, the mighty Thor finds himself in a deadly gladiatorial contest that pits him against the Hulk, his former ally and fellow Avenger. Thor's quest for survival leads him in a race against time to prevent the all-powerful Hela from destroying his home world and the Asgardian civilization.",
+            image: "images/ragnarok.jpg"
+        }, {
+            title: "Avengers Endgame",
+            description: "After half of all life is snapped away by Thanos, the Avengers are left scattered and divided. Now with a way to reverse the damage, the Avengers and their allies must assemble once more and learn to put differences aside in order to work together and set things right.",
+            image: "images/avengers.jpg"
+        }, {
+            title: "Avengers Endgame",
+            description: "After half of all life is snapped away by Thanos, the Avengers are left scattered and divided. Now with a way to reverse the damage, the Avengers and their allies must assemble once more and learn to put differences aside in order to work together and set things right.",
+            image: "images/avengers.jpg"
+        }]
+    });
 };
-/* GET 'Location info' page */
-const login = function (req, res) {
-    res.render('index', { title: 'Login Page' });
+
+/* GET 'My Rentals' page */
+const myRentals = function (req, res) {
+    res.render('myRentals', {
+        rentals: [{
+            title: "The Nightmare Before Christmas",
+            rentalDate: "12/09/2022",
+            rentalDueDate: "19/09/2022"
+        }, {
+            title: "Night At The Museum",
+            rentalDate: "12/09/2022",
+            rentalDueDate: "19/09/2022"
+        }, {
+            title: "Thor Ragnarok",
+            rentalDate: "12/09/2022",
+            rentalDueDate: "19/09/2022"
+        }, {
+            title: "Avengers Endgame",
+            rentalDate: "12/09/2022",
+            rentalDueDate: "19/09/2022"
+        }]
+    });
 };
-/* GET 'Add review' page */
-const myAccount = function (req, res) {
-    res.render('myaccount', { 
-    title: 'My Account', 
-    user:{
-        MemberID: "",
-        Eircode: "",
-        DOB: "",
-        Forename: "Darragh",
-        Lastname: "Elbel",
-        Password: "123456",
-        Phone: "0870980481",
-        Email: "darragh.elbel@students.ittralee.ie",
-        CarDetails: "",
-        ExpireDate: "",
-        CVV: ""
-    },
-    rentals:[{title: "The Nightmare Before Christmas", rentalDate:"12/09/2022", rentalDueDate: "19/09/2022", price:"€5.50"},
-    {title: "Night At The Museum", rentalDate:"12/09/2022", rentalDueDate: "19/09/2022", price:"€4.50"},
-    {title: "Thor Ragnarok", rentalDate:"12/09/2022", rentalDueDate: "19/09/2022", price:"€6.50"},
-    {title: "Avengers Endgame", rentalDate:"12/09/2022", rentalDueDate: "19/09/2022", price:"€5.50"},
-    {title: "Apocalypse Now", rentalDate:"12/09/2022", rentalDueDate: "19/09/2022", price:"€5.50"}
-]
-});
-};
+
 module.exports = {
-    rentalsList,
-    login,
-    myAccount
+    myRentals,
+    rentals
 };

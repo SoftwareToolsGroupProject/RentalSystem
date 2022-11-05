@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    
+    script(src="/javascripts/myaccount.js") 
 
     .card.myAccountSection
      h2 My Account Details  
@@ -61,7 +61,7 @@ block content
         
      .row.myAccountRow           
         .col-lg-12.formCol 
-            button.btn.btn-primary.updateAccountBtn(type='button' onclick="updateDetails()") Update My Details
+            button.btn.btn-primary.updateAccountBtn(type='button' onclick="verifyUpdate()") Update My Details
         
                     
     .card.myAccountSection
