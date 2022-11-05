@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .container.py-4.py-xl-5
+    h1 Hello [username]
+    .table-responsive
+      table.table
+        thead
+          tr
+            th DVD Title
+            th Rental Date
+            th Due Date
+            th Remove
+        tbody
+          each rental in rentals
+            tr
+              td #{rental.title}
+              td #{rental.rentalDate}
+              td #{rental.rentalDueDate}
+                // Button to remove dvd from return list
+              td
+                button.btn.btn-dark(type='button') X

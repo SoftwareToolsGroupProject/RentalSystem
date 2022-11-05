@@ -8,7 +8,6 @@ const login = function (req, res) {
     res.render('login', { title: 'Login Page' });
 };
 
-
 const myAccount = function (req, res) {
     res.render('myaccount', { 
     title: 'My Account', 
@@ -33,6 +32,7 @@ const myAccount = function (req, res) {
 ]
 });
 };
+
 module.exports = {
     register,
     login,
