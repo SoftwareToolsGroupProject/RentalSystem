@@ -2,7 +2,7 @@ html, body{
   margin:0;
   padding-left: 50px;
   padding-right: 50px;
-  min-height: 100%;
+  min-height: 100vh;
   font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -91,4 +91,40 @@ td{
 
 .rentalHistory{
   
+}
+
+.loginDiv{
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.loginCard{
+  padding: 2rem;
+}
+
+
+.loginContainer{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 10%;
+}
+
+.regLink{
+  text-align: center;
+}
+
+.imagePlaceholder{
+  width: 125px;
+  height: 125px;
+  margin-left: auto;
+  margin-right:auto;
+  border-radius: 50%;
+  background-color: lightblue;
+
 }
