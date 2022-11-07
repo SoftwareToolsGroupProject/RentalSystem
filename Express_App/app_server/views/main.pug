@@ -1,0 +1,36 @@
+extends layout 
+
+block content
+
+  script(src='/javascripts/rentals.js')
+
+  .container.py-4.py-xl-5
+    h1 Hello [username]
+  .row.row-cols-3.row-cols-md-2.row-cols-lg-3
+    .col-xl-3.mb-4
+      .card
+        .card-body
+          h4.card-title#title
+          p.card-text#description
+        button.btn.btn-dark(type='button', onclick='updateCartCount()') Add to Order
+    
+    .col-lg-6.mb-2
+      each dvd in dvdInfo
+        a(href='#')
+          img.p-1.fit-cover(src=dvd.image, width='158', height='122', onclick='populateInfoCard("' + dvd.title + '", "' + dvd.description + '")')
+      
+    .card.col-lg-3
+      .card-body
+        h4#cartHeader.card-title(onload='updateCartCount()')
+        .row.p-1
+          .col-sm-6.p.display-6 #{dvdInfo[3].title}
+          .col-sm-4.p.display-6 6.00
+          .col-sm-2.button.close(type='button', aria-label='Close')
+            span(aria-hidden='true') &times;
+      .row.p-1
+        .col-sm-6.p.display-6 Total
+        .col-sm-6.p.display-6 18.00
+
+      button.btn.btn-dark(type='button') Rent
+      
+    
