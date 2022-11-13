@@ -1,30 +1,49 @@
+
+let firstNameIn = document.getElementById("firstName");
+firstNameIn.value = localStorage.Firstname
+
+let lastNmaeIn = document.getElementById("lastName");
+lastNmaeIn.value = localStorage.Lastname
+
+let passwordIn = document.getElementById("password");
+passwordIn.value = localStorage.Password
+    
+let confPasswordIn = document.getElementById("confPassword");
+confPasswordIn.value = localStorage.Password
+
+let emailIn = document.getElementById("email");
+emailIn.value = localStorage.Email
+
+let phoneIn = document.getElementById("phone");
+phoneIn.value = localStorage.Phone
+
+let cnumIn = document.getElementById("cnum");
+cnumIn.value = localStorage.CardDetails
+
+let cExpIn = document.getElementById("cExp");
+cExpIn.value = localStorage.ExpireDate
+let cvvIn = document.getElementById("ccv");
+cvvIn.value = localStorage.Email
+
 function verifyUpdate(){
 
-    let firstNameIn = document.getElementById("firstName");
+    
     let firstName = firstNameIn.value;
-
-    let lastNmaeIn = document.getElementById("lastName");
+    
     let lastname = lastNmaeIn.value;
 
-    let passwordIn = document.getElementById("password");
     let password = passwordIn.value;
-    
-    let confPasswordIn = document.getElementById("confPassword");
+        
     let confPassword = confPasswordIn.value;
-
-    let emailIn = document.getElementById("email");
+  
     let email = emailIn.value;
-
-    let phoneIn = document.getElementById("phone");
+    
     let phone = phoneIn.value;        
-
-    let cnumIn = document.getElementById("cnum");
-    let cnum = cnumIn.value;
-        
-    let cExpIn = document.getElementById("cExp");
-    let cExp = cExpIn.value;
-        
-    let cvvIn = document.getElementById("ccv");
+    
+    let cnum = cnumIn.value;        
+    
+    let cExp = cExpIn.value;        
+    
     let cvv = cvvIn.value;
 
     let warningMessage = "Please fix the following before continuting\n";
@@ -65,3 +84,4 @@ function updateDetails(){
     alert("Your account details have been updated");
 
 }
+
