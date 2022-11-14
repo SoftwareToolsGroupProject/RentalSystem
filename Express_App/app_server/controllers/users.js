@@ -1,4 +1,5 @@
 /* GET 'Register' page */
+
 const register = function (req, res) {
     res.render('index', { title: 'Register' });
 };
@@ -8,6 +9,7 @@ const login = function (req, res) {
     res.render('login', { title: 'Login Page' });
 };
 
+
 const myAccount = function (req, res) {
     res.render('myaccount', { 
     title: 'My Account', 
@@ -15,11 +17,11 @@ const myAccount = function (req, res) {
         MemberID: "",
         Eircode: "",
         DOB: "",
-        Forename: "Darragh",
-        Lastname: "Elbel",
-        Password: "123456",
-        Phone: "0870980481",
-        Email: "darragh.elbel@students.ittralee.ie",
+        Forename: "",
+        Lastname: "",
+        Password: "",
+        Phone: "",
+        Email: "",
         CarDetails: "",
         ExpireDate: "",
         CVV: ""
