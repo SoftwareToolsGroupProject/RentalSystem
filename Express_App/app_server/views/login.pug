@@ -1,0 +1,25 @@
+extends layout 
+
+block content
+
+      script(src="/javascripts/login.js") 
+      
+      .loginContainer
+        .imagePlaceholder
+        .loginDiv
+            .card.loginCard
+                .col-lg-12.formCol
+                    table
+                        tr 
+                            td Email*
+                            td 
+                                input(type="text", name="",required, value='').formIn.form-control#email
+                        tr
+                            td Password*
+                            td 
+                                input(type="text", name="",required, value='').formIn.form-control#password
+                .col-lg-12.formCol 
+                 button.btn.btn-primary.updateAccountBtn(type='button' onclick="verifyLogin()") Login
+                a(href="/register").regLink Don't have an account? Register here.
+    
+        

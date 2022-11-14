@@ -1,0 +1,60 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0', charset="utf-8")
+    title=title
+    link(rel='stylesheet', href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css", 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm", crossorigin="anonymous")
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css", 
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==", crossorigin="anonymous", referrerpolicy="no-referrer")
+    link(rel='stylesheet', href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css")
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    
+  body
+      nav.navbar.navbar-light.bg-light.navbar-expand-md.py-3.sticky-top.navbar-shrink.py-3
+        .container
+          
+          a.navbar-brand.d-flex.align-items-center(href='/') DVD Rental
+          button.navbar-toggler(data-toggle='collapse', data-target='#navcol-2')
+            span.sr-only Toggle navigation
+            span.navbar-toggler-icon
+          #navcol-2.collapse.navbar-collapse
+            ul.navbar-nav.mr-auto
+              li.nav-item
+                a.nav-link.active(href='/rentals')
+                  strong My Rentals
+              li.nav-item
+                a.nav-link(href='/myAccount') My Account
+            input(type='search', style='padding-top: 1px;', placeholder='Search')
+            a.btn.btn-dark(role='button', href='/login') Log out
+          
+      block content
+
+      footer
+        .container.text-center.py-4
+          .row.row-cols-1.row-cols-lg-3
+            .col
+              p.text-muted.my-2 Copyright &copy; 2022&nbsp;
+            .col
+              ul.list-inline.my-2
+                li.list-inline-item
+                  .bs-icon-circle.bs-icon-primary.bs-icon
+                  // socaial media icon
+                li.list-inline-item
+                  .bs-icon-circle.bs-icon-primary.bs-icon
+                  // socaial media icon
+                li.list-inline-item
+                  .bs-icon-circle.bs-icon-primary.bs-icon
+                  // socaial media icon
+            .col
+              ul.list-inline.my-2
+                li.list-inline-item
+                li.list-inline-item
+                li.list-inline-item
+
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+        scipt(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.bundle.min.js')
+        script(src='/javascripts/bootstrap.min.js')
+        script(src='/javascripts/rentals.js')

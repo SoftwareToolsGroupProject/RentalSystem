@@ -1,0 +1,85 @@
+extends layout
+
+block content
+    
+    .card.myAccountSection
+     h2 My Account Details  
+     .row.myAccountRow 
+            
+        .col-lg-6.formCol
+            table.left
+                tr 
+                    td Firstname*
+                    td 
+                        input(type="text", name="",required, value='' + user.Forename + '').formIn.form-control#firstName
+                tr 
+                    td Lastname* 
+                    td 
+                        input(type="text", name="",required, value='' + user.Lastname + '').formIn.form-control#lastName
+                tr 
+                    td Password* 
+                    td 
+                        input(type="text", name="",required, value='' + user.Password + '').formIn.form-control#password
+                tr 
+                    td Confirm Password* 
+                    td 
+                        input(type="text", name="",required, value='' + user.Password + '').formIn.form-control#confPassword
+                tr 
+                    td
+                     br
+                tr
+                    td 
+                     br
+                     
+        
+        .col-lg-6.formCol
+            table.right
+                tr 
+                    td Email* 
+                    td 
+                        input(type="text", name="",required, value='' + user.Email + '').formIn.form-control#email
+                tr 
+                    td Phone* 
+                    td 
+                        input(type="text", name="",required, value='' + user.Phone + '').formIn.form-control#phone
+                tr 
+                    td(colspan="3").tableSub Card Details
+
+                tr 
+                    td Card Number 
+                    td
+                        input(type="text", name="",required, value='' + user.CarDetails + '').formIn.form-control#cnum
+                tr  
+                    td Expiry Date 
+                    td 
+                        input(type="text", name="",required, value='' + user.ExpireDate + '').formIn.form-control#cExp
+                tr 
+                    td CCV 
+                    td  
+                        input(type="text", name="", required, value='' + user.CVV + '').formIn.form-control#ccv
+        
+     .row.myAccountRow      
+        .col-lg-12.formCol 
+            button.btn.btn-primary.updateAccountBtn(type='button' onclick="verifyUpdate()") Update My Details
+        
+                    
+    .card.myAccountSection
+        h2 Rental History  
+     
+        .card.rentalHistory
+            table.table.rentalHistory 
+                tr 
+                    th
+                    th Movie Title 
+                    th Rental Date 
+                    th Return Date 
+                    th Price
+                each rental in rentals
+                    tr.filmRow  
+                        td 
+                            i.fa.fa-film(aria-hidden='true')
+                        td=rental.title
+                        td=rental.rentalDate
+                        td=rental.rentalDueDate 
+                        td=rental.price
+    script(src="/javascripts/myaccount.js") 

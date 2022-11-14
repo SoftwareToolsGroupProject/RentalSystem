@@ -1,0 +1,31 @@
+extends layout 
+
+block content
+
+  .container.py-4.py-xl-5
+    h1 Hello [username]
+  .row.row-cols-3.row-cols-md-2.row-cols-lg-3
+    .col-xl-3.mb-4
+      .card
+        .card-body
+          h4.card-title#title
+          p.card-text#description
+        button.btn.btn-dark#add(type='button', onclick='addToCart()') Add to Order
+    
+    .col-lg-6.mb-2
+      each dvd in dvdInfo
+        a(href='#')
+          img.p-1.fit-cover(src=dvd.image, width='158', height='122', onclick='populateInfoCard("' + dvd.title + '", "' + dvd.description + '", "' + dvd.availability + '")')
+      
+    .card.col-lg-3
+      .card-body#cartItems
+        h4#cartHeader.card-title Cart
+        table#cartTable
+          
+      .row.p-1
+        .col-sm-6.p.display-6 Total
+        .col-sm-6.p#totalPrice.display-6 18.00
+
+      button.btn.btn-dark(type='button') Rent
+      
+  
