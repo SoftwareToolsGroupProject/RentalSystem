@@ -24,11 +24,6 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class LoginPageTest {
 
-
-
-    LoginPage loginPage = new LoginPage();
-
-
     @BeforeAll
     public static void setUpAll() {
         Configuration.browserSize = "1280x800";
@@ -39,13 +34,8 @@ public class LoginPageTest {
         options.setBinary("C:\\Program Files\\Google\\Chrome\\Application");
     }
 
-    @BeforeEach
-    public void setUp() {
-        //open("http://localhost:3000/login");
-    }
-
     @Test
-    public void loginButton() throws InterruptedException {
+    public void loginButtonAlert() throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
         driver.get("http://localhost:3000/login");
@@ -69,6 +59,29 @@ public class LoginPageTest {
     }
 
     @Test
+    public void loginButtonValid() throws InterruptedException {
+
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://localhost:3000/login");
+        WebElement emailIn = driver.findElement(By.xpath("//input[@id = 'email']"));
+        WebElement passIn = driver.findElement(By.xpath("//input[@id = 'password']"));
+        WebElement loginBtn = driver.findElement(By.xpath("//button[text() = 'Login']"));
+
+        emailIn.sendKeys("darragh@elbel.ie");
+        passIn.sendKeys("123456");
+        TimeUnit.SECONDS.sleep(3);
+        loginBtn.click();
+
+
+
+        TimeUnit.SECONDS.sleep(3);
+        String URL = driver.getCurrentUrl();
+        driver.quit();
+
+        assertEquals("http://localhost:3000/", URL);
+    }
+
+    @Test
     public void registerLink() throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
@@ -84,6 +97,5 @@ public class LoginPageTest {
 
         assertEquals("http://localhost:3000/register", URL);
     }
-
 
 }
