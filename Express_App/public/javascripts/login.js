@@ -1,5 +1,3 @@
-const e = require("express");
-const { response } = require("../../app");
 
 function verifyLogin(){
     let emailIn = document.getElementById("email");
