@@ -1,7 +1,7 @@
 //Search dvd by name
 
 let cartCount = 0;
-let totaPrice = 0;
+let totalPrice = 0;
 const maxCartSize = 5;
 
 function populateInfoCard(title, description, available) {
@@ -89,17 +89,26 @@ function updateCartTotal(p) {
 
     add.addEventListener("click", increase);
     function increase() {
-        totaPrice += p;
+        totalPrice += p;
         console.log('increase price');
     }
 
     remove.addEventListener("click", decrease);
     function decrease() {
-        totaPrice -= p;
+        totalPrice -= p;
         console.log('decrease price');
     }
 
-    document.querySelector('#totalPrice').innerHTML = totaPrice + ".00";
+    document.querySelector('#totalPrice').innerHTML = totalPrice + ".00";
     console.log('Update cart total')
 }
 
+module.exports = {
+    populateInfoCard,
+    checkAvailibility,
+    increaseCartCount,
+    addToCart,
+    removeFromCart,
+    decreaseCartCount,
+    updateCartTotal
+};
