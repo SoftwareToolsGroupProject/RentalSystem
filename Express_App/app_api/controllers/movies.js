@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const Movie = mongoose.model('Movie');
-const Rental = mongoose.model('Rental');
+const movie = mongoose.model('Movie');
+const rental = mongoose.model('Rental');
 
 const moviesListAll = function (req, res) {
-    Movie.find({}, function (err, result) {
+    movie.find({}, function (err, result) {
         if (err) {
             console.log(err);
         } else {
@@ -14,7 +14,7 @@ const moviesListAll = function (req, res) {
 
 const movieReadOne = function (req, res) {
     if (req.params && req.params.movieid) {
-        Movie
+        movie
             .findById(req.params.movieid)
             .exec((err, movie) => {
                 if (!movie) {
@@ -44,7 +44,7 @@ const movieReadOne = function (req, res) {
 };
 
 const addRental = function (req, res) {
-    Rental.create({
+    rental.create({
         RentalID: req.body.RentalID,
         MemberID: req.body.MemberID,
         DVDID: req.body.DVDID,
@@ -64,7 +64,7 @@ const addRental = function (req, res) {
 };
 
 const rentalsReadAll = function (req, res) {
-    Rental.find(
+    rental.find(
         {
             'MemberID': '00001'
         }
@@ -72,7 +72,7 @@ const rentalsReadAll = function (req, res) {
 };
 
 const updateRental = function (req, res) {
-    Rental.updateOne(
+    rental.updateOne(
         { RentalID: "00002" },//get variable from member logged in
         { $set: { 
             Status: "C"

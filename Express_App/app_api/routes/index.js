@@ -12,13 +12,9 @@ router
 router
   .route('/members/login/:Email/p/:Password')
   .get(ctrlMembers.membersLogin)
-
-// my account : get my details
-router
-  .route('/myaccount/:MemberID')
-  .get(ctrlMembers.membersReadOne)
   .put(ctrlMembers.updateMember)
 
+// my account : get my details
 
 // main : list all movies
 router
