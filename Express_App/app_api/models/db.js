@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const dbURI ='REMOVED FROM COMMIT FOR SECURITY';
+const dbURI = process.env.dbURI;
 
 
 try {

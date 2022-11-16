@@ -3,7 +3,9 @@
 const login = require('../public/javascripts/login')
 
 
-/*const mongoose = require("mongoose");
+
+// Testing databse TBC
+const mongoose = require("mongoose");
 const request = require('supertest');
 const app = require("../app");
 
@@ -14,7 +16,7 @@ beforeEach(async () => {
 });
 
 
- Testing databse TBC
+
 describe("GET /members/:MemberID", () => {
     it("should return member", async () => {
         const res = await request(app).get("/api/members/:MemberID");
@@ -25,4 +27,4 @@ describe("GET /members/:MemberID", () => {
 
 afterEach(async () => {
     await mongoose.connection.close();
-});*/
+});
