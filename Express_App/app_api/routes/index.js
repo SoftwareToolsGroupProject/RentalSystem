@@ -32,7 +32,4 @@ router
   .get(ctrlMovies.rentalsReadAll)
   .put(ctrlMovies.updateRental)
 
-
-
-
 module.exports = router;

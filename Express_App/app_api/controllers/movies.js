@@ -21,7 +21,7 @@ const movieReadOne = function (req, res) {
                     res
                         .status(404)
                         .json({
-                            "message": "Movie ID not found"
+                            "message": "Rented Movie ID not found"
                         });
                     return;
                 } else if (err) {

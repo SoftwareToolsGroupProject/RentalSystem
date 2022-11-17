@@ -1,8 +1,11 @@
 //Search dvd by name
 
+//search dvd by name  
+
 let cartCount = 0;
 let totalPrice = 0;
 const maxCartSize = 5;
+
 
 function populateInfoCard(title, description, available) {
     document.querySelector('#title').innerHTML = title
