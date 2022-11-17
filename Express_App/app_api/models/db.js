@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+require('dotenv').config() 
 const dbURI = process.env.DBURI;
 
 
@@ -7,7 +8,7 @@ try {
     mongoose.connect(
         dbURI,
         { useNewUrlParser: true, useUnifiedTopology: true },
-        () => console.log(" Mongoose is connected")
+        () => console.log(" Mongoose is connected" + dbURI)
         );
     }
      catch (e) {
