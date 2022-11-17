@@ -1,10 +1,7 @@
-// tests login
-
-const login = require('../public/javascripts/login')
 
 
 
-// Testing databse TBC
+// Testing database TBC
 const mongoose = require("mongoose");
 const request = require('supertest');
 const app = require("../app");
@@ -19,9 +16,8 @@ beforeEach(async () => {
 
 describe("GET /members/:MemberID", () => {
     it("should return member", async () => {
-        const res = await request(app).get("/api/members/:MemberID");
+        const res = await request(app).get("/api/members/00001");
         expect(res.statusCode).toBe(200);
-        expect(res.body.length).toBeGreaterThan(0);
     });
 });
 

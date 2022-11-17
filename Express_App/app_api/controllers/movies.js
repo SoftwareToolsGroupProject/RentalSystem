@@ -66,17 +66,21 @@ const addRental = function (req, res) {
 const rentalsReadAll = function (req, res) {
     rental.find(
         {
-            'MemberID': '00001'
+            'RentalID': '00002'
         }
     )
 };
 
 const updateRental = function (req, res) {
     rental.updateOne(
-        { RentalID: "00002" },//get variable from member logged in
-        { $set: { 
-            Status: "C"
-        } },
+        {RentalID: "00002"},//get variable from member logged in
+        {
+            $set: {
+                rentals: {
+                    Status: "C"
+                }
+            }
+        },
         function (err, rental) {
             if (err) {
                 res
