@@ -1,3 +1,5 @@
+[![Board Status](https://dev.azure.com/DarraghElbel/56f2ad84-954f-4ef7-8c96-1d5703ea2ef0/ca7fb260-8b7c-461f-9bfa-aa2c0858e450/_apis/work/boardbadge/f09cbe1d-299e-4656-8712-94052adc4da9)](https://dev.azure.com/DarraghElbel/56f2ad84-954f-4ef7-8c96-1d5703ea2ef0/_boards/board/t/ca7fb260-8b7c-461f-9bfa-aa2c0858e450/Microsoft.RequirementCategory/)
+
 # RentalSystem
 Develop and design an application using Microsoft Azure DevOps as the primary software management tool
 
