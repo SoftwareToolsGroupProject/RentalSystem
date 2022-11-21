@@ -26,6 +26,15 @@ steps:
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
+- task: CreatePullRequest@1
+  inputs:
+    repoType: 'GitHub'
+    githubEndpoint: 'github.com_SoftwareToolsGroupProject'
+    githubRepository: 'SoftwareToolsGroupProject/RentalSystem'
+    sourceBranch: '$(Build.main)'
+    targetBranch: 'deploytest'
+    title: 'deploytest'
+    githubAutoMerge: true
 - task: Npm@1
   inputs:
     command: 'install'
@@ -37,14 +46,6 @@ steps:
     workingDir: './Express_App'
     customCommand: 'run test:ci'
 
-- task: CreatePullRequest@1
-  inputs:
-    repoType: 'GitHub'
-    githubEndpoint: 'github.com_SoftwareToolsGroupProject'
-    githubRepository: 'SoftwareToolsGroupProject/RentalSystem'
-    sourceBranch: '$(Build.main)'
-    targetBranch: 'deploytest'
-    title: 'deploytest'
-    githubAutoMerge: true
+
     
 
