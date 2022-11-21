@@ -30,7 +30,10 @@ function verifyLogin(){
 
 function loginConfirm(email, password){
     //Update details through API
-    httpGet(email, password);
+   httpGet(email, password);
+
+    // For test
+    console.log('Logged in')
 
 }
     
@@ -60,7 +63,7 @@ function httpGet(email, password)
             
         }
         else{
-            alert("Username or password were incorrect, pelase try again");
+            alert("Username or password were incorrect, please try again");
         }
     })
 
@@ -77,3 +80,7 @@ function httpGet(email, password)
         console.log(Http.responseText)
     }*/
 }
+
+module.exports = {
+    loginConfirm
+};

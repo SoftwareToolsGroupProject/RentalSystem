@@ -1,8 +1,24 @@
 //Search dvd by name
+function searchDVD() {
+
+        let input = document.querySelector('#search').value;
+        input = input.toLowerCase();
+        let x = document.querySelectorAll('.dvd');
+
+        for (i = 0; i < x.length; i++) {
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                x[i].style.display = "none";
+            }
+            else {
+                x[i].style.display = "list-item";
+            }
+        }
+}
 
 let cartCount = 0;
-let totaPrice = 0;
+let totalPrice = 0;
 const maxCartSize = 5;
+
 
 function populateInfoCard(title, description, available) {
     document.querySelector('#title').innerHTML = title
@@ -12,7 +28,7 @@ function populateInfoCard(title, description, available) {
 }
 
 function checkAvailibility(available) {
-    if (available == "false") {
+    if (available === "false") {
         document.querySelector('#add').textContent = "DVD not available"
         document.querySelector('#add').disabled = true;
     }
@@ -28,7 +44,7 @@ function addToCart() {
 
     let title = document.querySelector("#title").innerHTML;
 
-    if (title != '') {
+    if (title !== '') {
         let table = document.querySelector("#cartTable");
 
         let lastRow = table.rows[table.rows.length - 1];
@@ -65,13 +81,15 @@ function increaseCartCount() {
 }
 
 function removeFromCart() {
-
-    //ensure correct row is deleted - get row number
-    document.querySelector("#cartTable").deleteRow(0);
-    console.log('Remove from cart');
+    let table = document.querySelector("#cartTable");
+    let row = event.target.parentNode.parentNode;
+    let price = row.cells[1].innerHTML;
+    price = parseFloat(price);
+    decreaseCartTotal(price);
+    table.deleteRow(row.rowIndex);
     decreaseCartCount();
-    updateCartTotal(price);
 }
+
 
 function decreaseCartCount() {
     if (cartCount > 0) {
@@ -79,27 +97,17 @@ function decreaseCartCount() {
     }
 }
 
-function updateCartTotal(p) {
-
-    //check if adding or removing to increase or decrease price - complete mess, need to fix
-
-    const add = document.querySelector('#add');
-    const remove = document.querySelector('#remove');
-
-
-    add.addEventListener("click", increase);
-    function increase() {
-        totaPrice += p;
-        console.log('increase price');
-    }
-
-    remove.addEventListener("click", decrease);
-    function decrease() {
-        totaPrice -= p;
-        console.log('decrease price');
-    }
-
-    document.querySelector('#totalPrice').innerHTML = totaPrice + ".00";
-    console.log('Update cart total')
+function updateCartTotal(price) {
+    totalPrice += price;
+    document.querySelector('#totalPrice').innerHTML = totalPrice + ".00";
 }
 
+
+function decreaseCartTotal(price) {
+    totalPrice -= price;
+    document.querySelector('#totalPrice').innerHTML = totalPrice + ".00";
+}
+
+module.exports = {
+    increaseCartCount
+};
