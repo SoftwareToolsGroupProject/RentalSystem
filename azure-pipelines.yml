@@ -17,7 +17,7 @@ steps:
   inputs:
     command: 'custom'
     workingDir: './Express_App'
-    customCommand: 'npm run test:ci'
+    customCommand: 'run test:ci'
     
 - task: SonarCloudPrepare@1
   inputs:
