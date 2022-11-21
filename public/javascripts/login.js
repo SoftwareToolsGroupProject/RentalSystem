@@ -56,7 +56,7 @@ function httpGet(email, password)
             localStorage.setItem("CardDetails",responseData[0].CardDetails)
             localStorage.setItem("ExpireDate", responseData[0].ExpireDate)
             localStorage.setItem("CCV", responseData[0].CCV)
-            window.location.replace = "https://dvdrental-softwaretools.herokuapp.com/myAccount";
+            window.location.href = "https://dvdrental-softwaretools.herokuapp.com/myAccount";
             
         }
         else{
