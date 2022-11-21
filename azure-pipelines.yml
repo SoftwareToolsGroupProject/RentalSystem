@@ -18,6 +18,7 @@ steps:
     command: 'install'
     workingDir: './Express_App'
 - task: Npm@1
+  displayName: jest tests
   inputs:
     command: 'custom'
     workingDir: './Express_App'
