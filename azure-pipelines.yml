@@ -12,18 +12,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-
-- task: Npm@1
-  inputs:
-    command: 'install'
-    workingDir: './Express_App'
-- task: Npm@1
-  displayName: jest tests
-  inputs:
-    command: 'custom'
-    workingDir: './Express_App'
-    customCommand: 'run test:ci'
-    
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'sonarcloudConnection'
@@ -38,3 +26,15 @@ steps:
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: './Express_App'
+- task: Npm@1
+  displayName: jest tests
+  inputs:
+    command: 'custom'
+    workingDir: './Express_App'
+    customCommand: 'run test:ci'
+    
+
