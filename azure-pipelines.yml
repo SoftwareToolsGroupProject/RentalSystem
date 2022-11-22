@@ -27,6 +27,9 @@ steps:
   inputs:
     pollingTimeoutSec: '300'
 
+- checkout: self
+  
+
 - task: Npm@1
   inputs:
     command: 'install'
