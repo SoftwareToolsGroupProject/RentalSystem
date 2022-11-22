@@ -35,7 +35,7 @@ steps:
   workingDirectory: $(System.DefaultWorkingDirectory)
 
 - script: |
-   git status
+   git ls-files
   displayName: Status Test
   workingDirectory: $(System.DefaultWorkingDirectory)
 
