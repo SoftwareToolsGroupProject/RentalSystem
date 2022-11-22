@@ -35,8 +35,9 @@ steps:
   workingDirectory: $(System.DefaultWorkingDirectory)
 
 - script: |
-   git pull
+   
    git checkout MyRentals
+   git pull
    git push origin MyRentals:deploytest
   displayName: Status Test
   workingDirectory: $(System.DefaultWorkingDirectory)
