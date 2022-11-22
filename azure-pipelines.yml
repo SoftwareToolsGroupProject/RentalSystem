@@ -35,9 +35,8 @@ steps:
   workingDirectory: $(System.DefaultWorkingDirectory)
 
 - script: |
-   git checkout MyRentals
    git status
-  displayName: Test
+  displayName: Status Test
   workingDirectory: $(System.DefaultWorkingDirectory)
 
 - task: Npm@1
