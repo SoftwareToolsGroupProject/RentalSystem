@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "jest --no-cache",
+    "test": "jest --coverage --verbose --no-cache",
     "test:ci": "jest --watchAll=false"
   },
   "dependencies": {
