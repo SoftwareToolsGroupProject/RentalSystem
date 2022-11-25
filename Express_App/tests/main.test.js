@@ -1,8 +1,24 @@
-// tests main.pug
+/**
+ * @jest-environment jsdom
+ */
 
+require('../public/javascripts/main.js');
 
-const main = require('../public/javascripts/main')
+describe('Test /main', () => {
+    before('before', () => {
+        console.log('Ran before all the test suites');
+    });
 
-test('the availability', () => {
-    expect(main.increaseCartCount());
-  });
+    after('after', () => {
+        console.log('Ran after all the test suites');
+    });
+
+    beforeEach('beforeEach', () => {
+        console.log('Ran before EACH test suite');
+    });
+
+    afterEach('afterEach', () => {
+        console.log('Ran after EACH test suite');
+    });
+
+});

@@ -46,7 +46,7 @@ function verifyUpdate(){
     
     let cvv = cvvIn.value;
 
-    let warningMessage = "Please fix the following before continuting\n";
+    let warningMessage = "Please fix the following before continuing\n";
     let allowContinue = true;
 
     if(firstName == "" || lastname == ""){
