@@ -65,3 +65,7 @@ function updateDetails(){
     alert("Your account details have been updated");
 
 }
+
+module.exports = {
+    verifyUpdate
+}
