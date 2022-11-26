@@ -1,12 +1,15 @@
+/**
+ * @jest-environment jsdom
+ */
 
-// jest.spyOn(window, 'alert').mockImplementation(() => { });
  const verifyUpdate = require('../public/javascripts/myaccount');
  
  describe("If any details incorrect should window alert", () => {
  
      it("should mock window alert function", () => {
- 
+
          document.body.innerHTML = '<input id="firstName" value="John" />';
+         localStorage.setItem("Firstname", "John");
          document.body.innerHTML += '<input id="lastName" value="" />';
          document.body.innerHTML += '<input id="password" value="password" />';
          document.body.innerHTML += '<input id="confPassword" value="password" />';
