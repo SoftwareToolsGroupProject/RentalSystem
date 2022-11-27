@@ -1,9 +1,13 @@
 const express = require('express');
+const createHttpError = require('http-errors');
 const router = express.Router();
 
 const ctrlMembers = require('../controllers/members');
 const ctrlMovies = require('../controllers/movies');
 
+router
+  .route('/members/')
+  .get(ctrlMembers.membersLogin)
 
 router
   .route('/members/:MemberID')

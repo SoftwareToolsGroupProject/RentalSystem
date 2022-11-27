@@ -14,10 +14,7 @@ a {
   width: 90%;
   height: 48%;
   padding: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1rem;
-  margin-top:1rem;
+  margin: 1rem auto;
 } 
 
 .formIn{
@@ -89,9 +86,6 @@ td{
   margin-top: 0.4rem;
 }
 
-.rentalHistory{
-  
-}
 
 .loginDiv{
   min-height: 100%;
@@ -129,6 +123,7 @@ td{
 
 }
 
+
 #loginBtn{
   margin: 0.3rem;
 }
@@ -136,3 +131,12 @@ td{
 #greetingMessage{
   display: block;
 }
+
+.btn{
+    padding: 0.6rem;
+    margin: 1rem auto;
+    width: 10rem;
+    height: 5rem;
+    font-size: 1.4rem;
+}
+

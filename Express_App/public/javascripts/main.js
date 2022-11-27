@@ -31,7 +31,7 @@ function populateInfoCard(title, description, available) {
 
 function checkAvailibility(available) {
     if (available === "false") {
-        document.querySelector('#add').textContent = "DVD not available"
+        document.querySelector('#add').textContent = "Not Available"
         document.querySelector('#add').disabled = true;
     }
     else {
@@ -110,6 +110,30 @@ function decreaseCartTotal(price) {
     document.querySelector('#totalPrice').innerHTML = totalPrice + ".00";
 }
 
-module.exports = {
-    increaseCartCount
-};
+function processRental(){
+    if (cartCount > 0) {
+        //create alert window to confirm rental
+        let confirm = window.confirm("Are you sure you want to rent these DVDs?");
+        if (confirm) {
+            clearCart();
+            alert("Thank you for renting with us!");
+        }
+    }
+    else {
+        alert("Please add a DVD to your order")
+    }
+}
+
+function clearCart() {
+    let table = document.querySelector("#cartTable");
+    let rowCount = table.rows.length;
+
+    for (let i = rowCount - 1; i >= 0; i--) {
+        table.deleteRow(i);
+    }
+
+    document.querySelector('#cartHeader').innerHTML = "Cart (0)";
+    document.querySelector('#totalPrice').innerHTML = "0.00";
+    cartCount = 0;
+    totalPrice = 0;
+}
