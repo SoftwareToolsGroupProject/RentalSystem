@@ -128,3 +128,11 @@ td{
   background-color: lightblue;
 
 }
+
+#loginBtn{
+  margin: 0.3rem;
+}
+
+#greetingMessage{
+  display: block;
+}
