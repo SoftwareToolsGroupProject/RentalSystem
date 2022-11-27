@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const movie = mongoose.model('Movie');
 const rental = mongoose.model('Rental');
+const Movie = require('../models/movies');
 
 const moviesListAll = function (req, res) {
     movie.find({}, function (err, result) {

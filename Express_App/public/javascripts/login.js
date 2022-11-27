@@ -9,12 +9,12 @@ function verifyLogin(){
     let allowContinue = true;
     let warningMessage = "";
 
-    if(email == ""){
+    if(email === ""){
         warningMessage+="> Email must be entered.\n";
         allowContinue = false;
     }
         
-    if(password == ""){
+    if(password === ""){
         warningMessage+="> Passwords must be entered.\n"
         allowContinue = false;
     }
