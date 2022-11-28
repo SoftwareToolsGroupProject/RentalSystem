@@ -28,7 +28,7 @@ function populateInfoCard(title, description, available) {
 }
 
 function checkAvailibility(available) {
-    if (available === "false") {
+    if (available === false) {
         document.querySelector('#add').textContent = "Not Available"
         document.querySelector('#add').disabled = true;
     }
@@ -134,4 +134,13 @@ function clearCart() {
     document.querySelector('#totalPrice').innerHTML = "0.00";
     cartCount = 0;
     totalPrice = 0;
+}
+
+module.exports = {
+    searchDVD,
+    checkAvailibility,
+    increaseCartCount,
+    processRental,
+    updateCartTotal,
+    decreaseCartTotal
 }
