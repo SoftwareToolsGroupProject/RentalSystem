@@ -48,7 +48,7 @@ function httpGet(email, password)
       };
 
     
-    fetch("http://localhost:3000/api/members/login/" + email + "/p/" + password, options).then((response) => (response.json())).then((responseData) => {
+    fetch("https://dvdrental-softwaretools.herokuapp.com/api/members/login/" + email + "/p/" + password, options).then((response) => (response.json())).then((responseData) => {
        
         if(responseData[0].Email == email && responseData[0].Password == password){
             localStorage.setItem("loggedIn", true);
@@ -60,7 +60,7 @@ function httpGet(email, password)
             localStorage.setItem("CardDetails",responseData[0].CardDetails)
             localStorage.setItem("ExpireDate", responseData[0].ExpireDate)
             localStorage.setItem("CCV", responseData[0].CCV)
-            window.location.href = "http://localhost:3000";
+            window.location.href = "https://dvdrental-softwaretools.herokuapp.com/myAccount";
             
         }
         else{
