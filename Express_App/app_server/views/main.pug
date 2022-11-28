@@ -10,7 +10,7 @@ block content
         .card-body
           h4.card-title#title
           p.card-text#description
-        button.btn.btn-dark#add(type='button', onclick='addToCart()') Add to Order
+        button.btn.btn-darkplay#add(type='button', onclick='addToCart()') Add to Order
     
     .col-lg-6.mb-2
       each dvd in dvdInfo
@@ -26,4 +26,4 @@ block content
         .col-sm-6.p.display-6 Total
         .col-sm-6.p#totalPrice.display-6 0.00
 
-      button.btn.btn-dark(type='button', onclick='processRental()') Rent
+      button.btn.btn-dark.play(type='button', onclick='processRental()') Rent
