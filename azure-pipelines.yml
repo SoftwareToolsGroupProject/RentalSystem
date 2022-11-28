@@ -30,12 +30,12 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: './Express_App'
+    workingDir: '.'
 - task: Npm@1
   displayName: jest tests
   inputs:
     command: 'custom'
-    workingDir: './Express_App'
+    workingDir: '.'
     customCommand: 'run test:ci'
 
 
