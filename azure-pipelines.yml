@@ -27,21 +27,6 @@ steps:
   inputs:
     pollingTimeoutSec: '300'
 
-- checkout: self
-  persistCredentials: true
-
-- script: |
-   git config --global user.email softwaretoolsgrouprojectDEDLIC@gmail.com & git config --global user.name "Pipeline"
-  workingDirectory: $(System.DefaultWorkingDirectory)
-
-- script: |
-   
-   git checkout MyRentals
-   git pull origin MyRentals
-   git push origin MyRentals:deploytest
-  displayName: Status Test
-  workingDirectory: $(System.DefaultWorkingDirectory)
-
 - task: Npm@1
   inputs:
     command: 'install'
