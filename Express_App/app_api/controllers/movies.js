@@ -96,7 +96,7 @@ const updateRental = function (req, res) {
         }
     );
 };
-
+//
 
 module.exports = {
     moviesListAll,
