@@ -24,10 +24,7 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
-<<<<<<< HEAD
     
-=======
->>>>>>> 879dba5fbcf054269e2041c0acabe25df67e45b0
     "jest": "^29.3.1",
     "jest-environment-jsdom": "^29.3.1",
     "supertest": "^6.3.1"
