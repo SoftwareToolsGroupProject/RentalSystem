@@ -123,6 +123,15 @@ td{
 
 }
 
+
+#loginBtn{
+  margin: 0.3rem;
+}
+
+#greetingMessage{
+  display: block;
+}
+
 .btn{
     padding: 0.6rem;
     margin: 1rem auto;
@@ -130,3 +139,4 @@ td{
     height: 5rem;
     font-size: 1.4rem;
 }
+

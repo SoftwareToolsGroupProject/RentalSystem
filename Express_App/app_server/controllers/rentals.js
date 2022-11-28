@@ -1,6 +1,7 @@
 /* GET 'Rentals' page */
 const rentals = function (req, res) {
     res.render('main', {
+        title: 'Rentals',
         dvdInfo: [{
             title: "The Nightmare Before Christmas",
             description: "Jack Skellington, the Pumpkin King of Halloween Town, decides to spread Christmas joy to the world. But his well-meaning mission unwittingly puts Santa Clause in jeopardy and creates a nightmare for all good little boys and girls everywhere!",
@@ -32,6 +33,7 @@ const rentals = function (req, res) {
 /* GET 'My Rentals' page */
 const myRentals = function (req, res) {
     res.render('myRentals', {
+        title: 'My Rentals',
         rentals: [{
             title: "The Nightmare Before Christmas",
             rentalDate: "12/09/2022",

@@ -12,24 +12,23 @@ html
     link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     
+    
   body
       nav.navbar.navbar-light.bg-light.navbar-expand-md.py-3.sticky-top.navbar-shrink.py-3
         .container
           
-          a.navbar-brand.d-flex.align-items-center(href='/') DVD Rental
+          a.navbar-brand.d-flex.align-items-center#mainLink(href='/') DVD Rental
           button.navbar-toggler(data-toggle='collapse', data-target='#navcol-2')
             span.sr-only Toggle navigation
             span.navbar-toggler-icon
           #navcol-2.collapse.navbar-collapse
             ul.navbar-nav.mr-auto
               li.nav-item
-                a.nav-link.active(href='/rentals')
-                  strong My Rentals
+                a.nav-link#rentalLink(href='/rentals') My Rentals
               li.nav-item
-                a.nav-link(href='/myAccount') My Account
+                a.nav-link#myAccLink(href='/myAccount') My Account
             input(type='search', style='padding-top: 1px;', placeholder='Search')
-            a.btn.btn-dark(role='button', href='/login') Log out
-          
+            a.btn.btn-dark#loginBtn(role='button', href='/login', onclick="logOut()")
       block content
 
       footer
@@ -48,7 +47,7 @@ html
                 li.list-inline-item
                   .bs-icon-circle.bs-icon-primary.bs-icon
                   // socaial media icon
-            .col
+            .col(onload="loadNav()")
               ul.list-inline.my-2
                 li.list-inline-item
                 li.list-inline-item
@@ -58,3 +57,4 @@ html
         scipt(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.bundle.min.js')
         script(src='/javascripts/bootstrap.min.js')
         script(src='/javascripts/main.js')
+        script(src="/javascripts/navigation.js") 

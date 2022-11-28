@@ -51,6 +51,7 @@ function httpGet(email, password)
     fetch("http://localhost:3000/api/members/login/" + email + "/p/" + password, options).then((response) => (response.json())).then((responseData) => {
        
         if(responseData[0].Email == email && responseData[0].Password == password){
+            localStorage.setItem("loggedIn", true);
             localStorage.setItem("Firstname", responseData[0].Forename);
             localStorage.setItem("Lastname",responseData[0].Lastname)
             localStorage.setItem("Phone", responseData[0].Phone)
@@ -67,18 +68,6 @@ function httpGet(email, password)
         }
     })
 
-
-
-   
-    
-
-    /*var Http = new XMLHttpRequest();
-    Http.open( "GET", "localhost:3000/api/members/login/" + email + "/p/" + password, true ); // false for synchronous request
-    console.log("COnnection opened")
-    Http.send( null );
-    Http.onreadystatechange = (e) => {
-        console.log(Http.responseText)
-    }*/
 }
 
 module.exports = {
