@@ -8,7 +8,7 @@ try {
     mongoose.connect(
         dbURI,
         { useNewUrlParser: true, useUnifiedTopology: true },
-        () => console.log(" Mongoose is connected")
+        () => console.log(" Mongoose is connected" + " " + dbURI)
         );
     }
      catch (e) {
