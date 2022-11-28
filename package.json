@@ -18,7 +18,8 @@
     "node-localstorage": "^2.2.1",
     "nodemon": "^2.0.20",
     "pug": "2.0.0-beta11",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "mongoose": "^6.7.3"
   },
   "devDependencies": {
     "dotenv": "^16.0.3",
