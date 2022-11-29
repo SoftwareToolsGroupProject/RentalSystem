@@ -16,3 +16,7 @@ Task 1: Set Up Version Control
 Task 2: Software Development/Code Sprint
 Task 3: Testing and Code Quality - Managing Technical Debt
 Task 4: Create a build pipeline with Azure Pipelines (Continuous Integration)
+
+SPRINT THREE - CI-CD
+Task 1: Continuous Integration
+Task 2: Continuous Deployment
